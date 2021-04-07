@@ -373,6 +373,7 @@ if [[ -d .heroku/src ]]; then
   cp -R .heroku/src "$CACHE_DIR/.heroku/" &> /dev/null || true
 fi
 
+python -m playwright install
 # Measure the size of the Python installation.
 # shellcheck disable=SC2119
 mmeasure 'python.size' "$(measure-size)"
