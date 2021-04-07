@@ -374,6 +374,8 @@ if [[ -d .heroku/src ]]; then
 fi
 
 python -m playwright install
+npm install playwright
+
 # Measure the size of the Python installation.
 # shellcheck disable=SC2119
 mmeasure 'python.size' "$(measure-size)"
