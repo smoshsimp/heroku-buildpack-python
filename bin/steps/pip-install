@@ -51,7 +51,9 @@ if [ ! "$SKIP_PIP_INSTALL" ]; then
         mcount "failure.pip-install"
         exit 1
     fi
-
+    
+    /app/.heroku/python -m playwright install
+    
     cp requirements.txt .heroku/python/requirements-declared.txt
     /app/.heroku/python/bin/pip freeze --disable-pip-version-check > .heroku/python/requirements-installed.txt
 
