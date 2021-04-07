@@ -52,7 +52,7 @@ if [ ! "$SKIP_PIP_INSTALL" ]; then
         exit 1
     fi
     
-    /app/.heroku/python -m playwright install
+    python -m playwright install
     
     cp requirements.txt .heroku/python/requirements-declared.txt
     /app/.heroku/python/bin/pip freeze --disable-pip-version-check > .heroku/python/requirements-installed.txt
